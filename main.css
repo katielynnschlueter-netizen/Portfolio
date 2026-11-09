@@ -1,0 +1,66 @@
+/* Page-wide look: soft background, serif text */
+body {
+  margin: 0;
+  background: #faf8f5;
+  color: #222;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+/* Header: site name on the left, nav links on the right */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 24px 48px;
+  border-bottom: 1px solid #ddd;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+header .site-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+header nav a {
+  margin-left: 24px;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Main content column, centered and readable */
+main {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+
+h1, h2 {
+  font-weight: normal;
+  letter-spacing: 0.02em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 13px;
+  color: #777;
+  font-family: Helvetica, Arial, sans-serif;
+}
