@@ -265,3 +265,81 @@ header nav a:hover {
     font-size: 36px;
   }
 }
+/* Front-page story: photo on the left, text on the right and wrapping below */
+.lead-story {
+  display: flow-root;   /* makes the section contain the floated photo */
+}
+
+.lead-photo {
+  float: left;
+  width: 42%;
+  margin: 0 40px 20px 0;
+}
+
+.lead-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.lead-photo figcaption {
+  margin-top: 8px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* Small section label above the headline */
+.kicker {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #5f6b2a;
+}
+
+/* Big serif headline, dark with olive on hover */
+.headline {
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: 44px;
+  line-height: 1.15;
+  margin: 8px 0 12px;
+}
+
+.headline a {
+  color: #222;
+  text-decoration: none;
+}
+
+.headline a:hover {
+  color: #5f6b2a;
+}
+
+.byline {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #777;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 12px;
+}
+
+.lead-story p {
+  font-size: 18px;
+}
+
+/* On phones, stack the photo above the text */
+@media (max-width: 700px) {
+  .lead-photo {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .headline {
+    font-size: 32px;
+  }
+}
