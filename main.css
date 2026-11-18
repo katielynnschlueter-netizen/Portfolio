@@ -1,47 +1,40 @@
+/* Fonts: Bodoni Moda for the name and headlines, Fira Sans Light for the nav */
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&family=Fira+Sans:wght@300&display=swap");
+
+/* ---------- Colors: change these to restyle the whole site ---------- */
+:root {
+  --sage: #5f7458;        /* name, nav bar, footer, links */
+  --sage-dark: #46583f;   /* link hover */
+  --sage-light: #e3e9df;  /* hover on white-on-green text */
+  --text: #222;
+  --muted: #777;
+  --line: #ddd;
+  --bg: #faf8f5;
+}
+
+/* ---------- Page basics ---------- */
 body {
   margin: 0;
-  background: #faf8f5;
-  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;      /* keeps the footer at the bottom on short pages */
+  background: var(--bg);
+  color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.7;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 24px 48px;
-  border-bottom: 1px solid #ddd;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-header .site-name {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-header nav a {
-  margin-left: 24px;
-}
-
-a {
-  color: #222;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 main {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
   max-width: 720px;
   margin: 60px auto;
   padding: 0 24px;
+}
+
+main.wide {
+  max-width: 1100px;
 }
 
 h1, h2 {
@@ -54,363 +47,44 @@ img {
   height: auto;
 }
 
-
-footer {
-  text-align: center;
-  padding: 40px 0;
-  font-size: 13px;
-  color: #777;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
 a {
-  color: #5f6b2a;
+  color: var(--sage);
   text-decoration: underline;
 }
 
 a:hover {
-  color: #3f4a15;   /* darker olive on hover */
+  color: var(--sage-dark);
 }
 
-
-header .site-name {
-  color: #222;
-  text-decoration: none;
-}
-
-main.wide {
-  max-width: 1100px;
-}
-
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 40px 32px;
-  margin-top: 40px;
-}
-
-.card {
-  display: block;
-  text-decoration: none;
-  color: #222;
-}
-
-.card .thumb {
-  aspect-ratio: 4 / 3;
-  background: #e4e6d3;
-  overflow: hidden;
-}
-
-.card .thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;      /* crops the image to fill the box neatly */
-  transition: transform 0.3s;
-}
-
-.card:hover .thumb img {
-  transform: scale(1.04);  /* gentle zoom on hover */
-}
-
-.card h3 {
-  margin: 14px 0 4px;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.3;
-}
-
-.card:hover h3 {
-  color: #5f6b2a;          /* titles turn olive on hover */
-}
-
-.card .tag {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #777;
-}
-/* Keep the footer at the very bottom, even on short pages */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Solid olive bar at the top of the page, and a solid line under the name */
-header {
-  border-top: 14px solid #5f6b2a;
-  border-bottom: 4px solid #5f6b2a;
-}
-
-/* Olive footer with white text */
-footer {
-  background: #5f6b2a;
-  color: #fff;
-  padding: 28px 0;
-}
-
-footer p {
-  margin: 12px 0 0;
-}
-
-/* Row of contact icons, centered */
-.contact-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 28px;
-}
-
-/* Footer links are white (this overrides the olive link color) */
-footer a {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-
-footer a:hover {
-  color: #e4e6d3;   /* soft light olive on hover */
-}
-
-/* The @ symbol for Instagram */
-.at-symbol {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 26px;
-  line-height: 1;
-}
-/* Site name in a Bodoni-style serif, like the resume */
-header .site-name {
-  font-family: "Bodoni Moda", Georgia, serif;
-  font-size: 28px;
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: 0.01em;
-}
-/* Header becomes a stacked masthead, centered */
-header {
-  display: block;
-  padding: 0;
-  text-align: center;
-  text-transform: none;
-  border-top: 14px solid #5f6b2a;
-  border-bottom: none;
-}
-
-.masthead {
-  padding: 18px 24px 0;
-}
-
-/* Small dateline row between thin rules, like a newspaper */
-.masthead .tagline {
-  display: block;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: #555;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
-  padding: 6px 0;
-}
-
-/* Big centered name with a double rule underneath */
-header .site-name {
-  display: block;
-  font-family: "Bodoni Moda", Georgia, serif;
-  font-size: 56px;
-  font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: 0.01em;
-  text-transform: none;
-  color: #222;
-  padding: 18px 0 14px;
-  border-bottom: 3px double #222;
-}
-
-/* Olive bar with the section links in white */
-header nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px 32px;
-  background: #5f6b2a;
-  padding: 12px 24px;
-  margin-top: 18px;
-}
-
-header nav a {
-  margin: 0;
-  color: #fff;
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-header nav a:hover {
-  color: #e4e6d3;
-  text-decoration: underline;
-}
-
-/* Smaller name on phones */
-@media (max-width: 600px) {
-  header .site-name {
-    font-size: 36px;
-  }
-}
-/* Front-page story: photo on the left, text on the right and wrapping below */
-.lead-story {
-  display: flow-root;   /* makes the section contain the floated photo */
-}
-
-.lead-photo {
-  float: left;
-  width: 42%;
-  margin: 0 40px 20px 0;
-}
-
-.lead-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.lead-photo figcaption {
-  margin-top: 8px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  color: #777;
-  line-height: 1.4;
-}
-
-/* Small section label above the headline */
-.kicker {
-  display: block;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #5f6b2a;
-}
-
-/* Big serif headline, dark with olive on hover */
-.headline {
-  font-family: "Bodoni Moda", Georgia, serif;
-  font-size: 44px;
-  line-height: 1.15;
-  margin: 8px 0 12px;
-}
-
-.headline a {
-  color: #222;
-  text-decoration: none;
-}
-
-.headline a:hover {
-  color: #5f6b2a;
-}
-
-.byline {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #777;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 12px;
-}
-
-.lead-story p {
-  font-size: 18px;
-}
-
-/* On phones, stack the photo above the text */
-@media (max-width: 700px) {
-  .lead-photo {
-    float: none;
-    width: 100%;
-    margin: 0 0 20px;
-  }
-  .headline {
-    font-size: 32px;
-  }
-}
-/* Header colors: change --sage to adjust the name and the nav bar together */
-:root {
-  --sage: #5f7458;
-}
-
-/* Remove the olive top stripe and left-align everything */
+/* ---------- Header: masthead + green nav bar ---------- */
 header {
   text-align: left;
-  border-top: none;
-  border-bottom: none;
 }
 
 .masthead {
   padding: 36px 48px 28px;
 }
 
-/* JNL 221 dateline: small, quiet, above the name, no rules */
 .masthead .tagline {
-  border: none;
-  padding: 0 0 4px;
-  color: var(--sage);
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 11px;
-}
-
-/* Large name in sage green, no double rule */
-header .site-name {
-  font-size: 72px;
-  line-height: 1.05;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
   color: var(--sage);
-  padding: 0;
-  border-bottom: none;
+  padding-bottom: 4px;
 }
 
-/* Full-width sage bar, light white links */
-header nav {
-  background: var(--sage);
-  justify-content: center;
-  gap: 8px 56px;
-  padding: 22px 24px;
-  margin-top: 0;
-}
-
-header nav a {
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 22px;
+header .site-name {
+  display: block;
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.05;
   letter-spacing: 0.01em;
-  text-transform: none;
-  color: #fff;
+  color: var(--sage);
+  text-decoration: none;
 }
 
-/* The page you're on shows in black, like "About" in your image */
-header nav a[aria-current="page"] {
-  color: #000;
-}
-
-@media (max-width: 600px) {
-  .masthead {
-    padding: 24px 24px 20px;
-  }
-  header .site-name {
-    font-size: 40px;
-  }
-  header nav {
-    gap: 8px 28px;
-  }
-  header nav a {
-    font-size: 18px;
-  }
-}
+header nav {
+  display:
