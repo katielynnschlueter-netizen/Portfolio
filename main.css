@@ -344,3 +344,73 @@ header nav a:hover {
     font-size: 32px;
   }
 }
+/* Header colors: change --sage to adjust the name and the nav bar together */
+:root {
+  --sage: #5f7458;
+}
+
+/* Remove the olive top stripe and left-align everything */
+header {
+  text-align: left;
+  border-top: none;
+  border-bottom: none;
+}
+
+.masthead {
+  padding: 36px 48px 28px;
+}
+
+/* JNL 221 dateline: small, quiet, above the name, no rules */
+.masthead .tagline {
+  border: none;
+  padding: 0 0 4px;
+  color: var(--sage);
+  font-size: 11px;
+}
+
+/* Large name in sage green, no double rule */
+header .site-name {
+  font-size: 72px;
+  line-height: 1.05;
+  color: var(--sage);
+  padding: 0;
+  border-bottom: none;
+}
+
+/* Full-width sage bar, light white links */
+header nav {
+  background: var(--sage);
+  justify-content: center;
+  gap: 8px 56px;
+  padding: 22px 24px;
+  margin-top: 0;
+}
+
+header nav a {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: #fff;
+}
+
+/* The page you're on shows in black, like "About" in your image */
+header nav a[aria-current="page"] {
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  .masthead {
+    padding: 24px 24px 20px;
+  }
+  header .site-name {
+    font-size: 40px;
+  }
+  header nav {
+    gap: 8px 28px;
+  }
+  header nav a {
+    font-size: 18px;
+  }
+}
