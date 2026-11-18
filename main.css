@@ -1,5 +1,6 @@
-/* Fonts: Bodoni Moda for the name and headlines, Fira Sans Light for the nav */
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&family=Fira+Sans:wght@300&display=swap");
+/* Fonts: Bodoni Moda for the name and headlines, Fira Sans Light for the nav,
+   Source Serif 4 for paragraph text */
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&family=Fira+Sans:wght@300&family=Source+Serif+4:wght@400;600&display=swap");
 
 /* ---------- Colors: change these to restyle the whole site ---------- */
 :root {
@@ -20,7 +21,7 @@ body {
   min-height: 100vh;      /* keeps the footer at the bottom on short pages */
   background: var(--bg);
   color: var(--text);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
   line-height: 1.7;
 }
 
@@ -56,7 +57,7 @@ a:hover {
   color: var(--sage-dark);
 }
 
-/* ---------- Header: masthead + green nav bar ---------- */
+/* ---------- Header: masthead ---------- */
 header {
   text-align: left;
 }
@@ -86,32 +87,23 @@ header .site-name {
   text-decoration: none;
 }
 
-header nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px 56px;
+/* ---------- Bootstrap navbar: green bar with white links ---------- */
+.sage-navbar {
+  --bs-navbar-color: #fff;
+  --bs-navbar-hover-color: var(--sage-light);
+  --bs-navbar-active-color: #000;
   background: var(--sage);
-  padding: 22px 24px;
+  padding: 14px 24px;
 }
 
-header nav a {
+.sage-navbar .nav-link {
   font-family: "Fira Sans", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 22px;
-  letter-spacing: 0.01em;
-  color: #fff;
-  text-decoration: none;
 }
 
-header nav a:hover {
-  color: var(--sage-light);
+.sage-navbar .nav-link:hover {
   text-decoration: underline;
-}
-
-/* The page you're on shows in black */
-header nav a[aria-current="page"] {
-  color: #000;
 }
 
 /* ---------- Footer: green bar with white contact icons ---------- */
@@ -217,66 +209,6 @@ footer a:hover {
   font-size: 18px;
 }
 
-/* ---------- Published Work list ---------- */
-.work-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 32px;
-}
-
-.work-list li {
-  padding: 18px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.work-list a {
-  font-size: 19px;
-}
-
-.work-list .tag {
-  display: block;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-/* ---------- Phones ---------- */
-@media (max-width: 700px) {
-  .lead-photo {
-    float: none;
-    width: 100%;
-    margin: 0 0 20px;
-  }
-  .headline {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 600px) {
-  .masthead {
-    padding: 24px 24px 20px;
-  }
-  header .site-name {
-    font-size: 40px;
-  }
-  header nav {
-    gap: 8px 28px;
-  }
-  header nav a {
-    font-size: 18px;
-  }
-}
-header nav {
-  display:
-/* Bubblegum-pink "coming soon" message */
-.magic-note {
-  color: #ff6fb5;
-  font-size: 32px;
-  text-align: center;
-  line-height: 1.4;
-}
 /* ---------- Home page: featured stories (compact row of three) ---------- */
 .featured {
   max-width: 860px;          /* smaller number = smaller cards */
@@ -296,7 +228,6 @@ header nav {
   color: var(--sage);
 }
 
-/* Always three in one line, stacking only on small phones */
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -340,7 +271,6 @@ header nav {
   color: var(--sage);
 }
 
-/* Category in light gray, year in small bold caps below it */
 .featured-card .tag {
   display: block;
   font-size: 13px;
@@ -363,28 +293,7 @@ header nav {
   font-size: 14px;
 }
 
-@media (max-width: 520px) {
-  .featured-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.sage-navbar {
-  --bs-navbar-color: #fff;
-  --bs-navbar-hover-color: var(--sage-light);
-  --bs-navbar-active-color: #000;
-  background: var(--sage);
-  padding: 14px 24px;
-}
-
-.sage-navbar .nav-link {
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 22px;
-}
-
-.sage-navbar .nav-link:hover {
-  text-decoration: underline;
-}
+/* ---------- Data visualization placeholder ---------- */
 .dataviz-box {
   min-height: 260px;
   display: flex;
@@ -393,57 +302,63 @@ header nav {
   background: var(--sage-light);
   color: var(--sage);
 }
-  
-.sage-navbar {
-  --bs-navbar-color: #fff;
-  --bs-navbar-hover-color: var(--sage-light);
-  --bs-navbar-active-color: #000;
-  background: var(--sage);
-  padding: 14px 24px;
+
+/* ---------- Published Work list ---------- */
+.work-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 32px;
 }
 
-.sage-navbar .nav-link {
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 22px;
+.work-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
 }
 
-.sage-navbar .nav-link:hover {
-  text-decoration: underline;
-}
-.sage-navbar {
-  --bs-navbar-color: #fff;
-  --bs-navbar-hover-color: var(--sage-light);
-  --bs-navbar-active-color: #000;
-  background: var(--sage);
-  padding: 14px 24px;
+.work-list a {
+  font-size: 19px;
 }
 
-.sage-navbar .nav-link {
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 22px;
+.work-list .tag {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
-.sage-navbar .nav-link:hover {
-  text-decoration: underline;
-}
-/* Green bar behind the Bootstrap navbar */
-.sage-navbar {
-  --bs-navbar-color: #fff;
-  --bs-navbar-hover-color: #e3e9df;
-  --bs-navbar-active-color: #000;
-  background: #5f7458;
-  padding: 14px 24px;
+/* ---------- Coming-soon message ---------- */
+.magic-note {
+  color: #ff6fb5;
+  font-size: 32px;
+  text-align: center;
+  line-height: 1.4;
 }
 
-.sage-navbar .nav-link {
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 22px;
+/* ---------- Phones ---------- */
+@media (max-width: 700px) {
+  .lead-photo {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .headline {
+    font-size: 32px;
+  }
 }
 
-.sage-navbar .nav-link:hover {
-  text-decoration: underline;
+@media (max-width: 600px) {
+  .masthead {
+    padding: 24px 24px 20px;
+  }
+  header .site-name {
+    font-size: 40px;
+  }
 }
-  
+
+@media (max-width: 520px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
