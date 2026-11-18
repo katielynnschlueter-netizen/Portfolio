@@ -385,3 +385,12 @@ header nav {
 .sage-navbar .nav-link:hover {
   text-decoration: underline;
 }
+.dataviz-box {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sage-light);
+  color: var(--sage);
+}
+  
