@@ -368,3 +368,38 @@ header nav {
     grid-template-columns: 1fr;
   }
 }
+/* ---------- Masthead: contact icons in the top right ---------- */
+.masthead-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.masthead-contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 8pt;           /* icons scale from this size */
+}
+
+.masthead-contact a {
+  display: flex;
+  align-items: center;
+  color: var(--sage);
+  text-decoration: none;
+}
+
+.masthead-contact a:hover {
+  color: var(--sage-dark);
+}
+
+.masthead-contact svg {
+  width: 1.6em;
+  height: 1.6em;
+}
+
+.masthead-contact .at-symbol {
+  font-size: 1.6em;
+}
