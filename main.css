@@ -185,3 +185,11 @@ footer a:hover {
   font-size: 26px;
   line-height: 1;
 }
+/* Site name in a Bodoni-style serif, like the resume */
+header .site-name {
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
