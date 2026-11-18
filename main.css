@@ -87,4 +87,186 @@ header .site-name {
 }
 
 header nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 56px;
+  background: var(--sage);
+  padding: 22px 24px;
+}
+
+header nav a {
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: 0.01em;
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: var(--sage-light);
+  text-decoration: underline;
+}
+
+/* The page you're on shows in black */
+header nav a[aria-current="page"] {
+  color: #000;
+}
+
+/* ---------- Footer: green bar with white contact icons ---------- */
+footer {
+  background: var(--sage);
+  color: #fff;
+  padding: 28px 0;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+footer p {
+  margin: 12px 0 0;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--sage-light);
+}
+
+.at-symbol {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* ---------- Home page: front-page story ---------- */
+.lead-story {
+  display: flow-root;     /* keeps the floated photo inside the section */
+}
+
+.lead-photo {
+  float: left;
+  width: 42%;
+  margin: 0 40px 20px 0;
+}
+
+.lead-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.lead-photo figcaption {
+  margin-top: 8px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.kicker {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.headline {
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-size: 44px;
+  line-height: 1.15;
+  margin: 8px 0 12px;
+}
+
+.headline a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.headline a:hover {
+  color: var(--sage);
+}
+
+.byline {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+
+.lead-story p {
+  font-size: 18px;
+}
+
+/* ---------- Published Work list ---------- */
+.work-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 32px;
+}
+
+.work-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.work-list a {
+  font-size: 19px;
+}
+
+.work-list .tag {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 700px) {
+  .lead-photo {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .headline {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .masthead {
+    padding: 24px 24px 20px;
+  }
+  header .site-name {
+    font-size: 40px;
+  }
+  header nav {
+    gap: 8px 28px;
+  }
+  header nav a {
+    font-size: 18px;
+  }
+}
+header nav {
   display:
